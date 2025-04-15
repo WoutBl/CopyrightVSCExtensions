@@ -1,0 +1,85 @@
+{
+  "name": "copyrightchecker",
+  "displayName": "CopyRightChecker",
+  "description": "This is an extension that checks all your files if it has a copyright header, use .copyignore to ignore files.",
+  "version": "1.0.0",
+  "publisher": "WoutBl",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Linters"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "copyignore",
+        "aliases": ["CopyIgnore", "copyignore"],
+        "extensions": [".copyignore"],
+        "configuration": "./language-configuration.json",
+        "icon": {
+           "light": "./media/_copyright_Light.svg",
+           "dark": "./media/_copyright_Dark.svg"
+         }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "copyignore",
+        "scopeName": "source.copyignore",
+        "path": "./syntaxes/copyignore.tmLanguage.json"
+      }
+    ],
+    "themes": [],
+    "commands": [
+      {
+        "command": "extension.checkCopyrightHeaders",
+        "title": "Check Copyright Headers"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Copyright Checker",
+      "properties": {
+        "copychecker.company": {
+          "type": "string",
+          "default": "SpectralBot BV",
+          "description": "Company name for copyright header"
+        },
+        "copychecker.email": {
+          "type": "string",
+          "default": "info@spectralbot.com",
+          "description": "Company email for copyright header"
+        }
+      }
+    }
+  },
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:csharp"
+  ],
+
+
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.99.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "eslint": "^9.23.0",
+    "typescript": "^5.8.2",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}

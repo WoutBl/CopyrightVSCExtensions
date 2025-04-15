@@ -1,0 +1,13 @@
+{
+    "scopeName": "source.copyignore",
+    "patterns": [
+      {
+        "name": "comment.line.number-sign.copyignore",
+        "match": "#.*$"
+      }
+    ],
+    "repository": {},
+    "fileTypes": ["copyignore"],
+    "name": "CopyIgnore"
+  }
+  
