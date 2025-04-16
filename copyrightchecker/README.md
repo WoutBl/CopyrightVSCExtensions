@@ -33,4 +33,8 @@ Added the right modules to the build
 
 Added an icon
 
+### 1.0.3
+
+fixed the default values of the settings
+
 ---

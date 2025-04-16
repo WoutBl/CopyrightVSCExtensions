@@ -2,7 +2,7 @@
   "name": "copyrightchecker",
   "displayName": "CopyRightChecker",
   "description": "This is an extension that checks all your files if it has a copyright header, use .copyignore to ignore files.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "icon": "media/Copyright_Icon.png",
   "publisher": "WoutBl",
   "engines": {
@@ -51,12 +51,12 @@
       "properties": {
         "copychecker.company": {
           "type": "string",
-          "default": "SpectralBot BV",
+          "default": "Your company",
           "description": "Company name for copyright header"
         },
         "copychecker.email": {
           "type": "string",
-          "default": "info@spectralbot.com",
+          "default": "Your company email",
           "description": "Company email for copyright header"
         }
       }
