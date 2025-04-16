@@ -1,4 +1,4 @@
-# copyrightchecker README
+# copyrightchecker
 
 ## Features
 
@@ -24,5 +24,13 @@ This extension contributes the following settings:
 ### 1.0.0
 
 Initial release of the copyrightchecker
+
+### 1.0.1
+
+Added the right modules to the build
+
+### 1.0.2
+
+Added an icon
 
 ---
